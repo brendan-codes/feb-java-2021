@@ -1,0 +1,10 @@
+package com.codingdojo.brendan;
+
+public class Square extends Dot {
+
+	public Square(int x, int y) {
+		super(x, y);
+		// TODO Auto-generated constructor stub
+	}
+
+}

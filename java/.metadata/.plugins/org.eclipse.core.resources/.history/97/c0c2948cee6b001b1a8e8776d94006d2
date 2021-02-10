@@ -1,0 +1,8 @@
+package com.codingdojo.brendan;
+
+public class Dot {
+	
+	private int x;
+	private int y;
+	
+}
