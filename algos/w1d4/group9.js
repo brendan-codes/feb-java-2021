@@ -27,7 +27,7 @@ class SLL {
                 result = null;
                 return "void";
             }
-            if (result.date == null) {
+            if (result.data == null) {
                 return "list is empty";
             }
         }

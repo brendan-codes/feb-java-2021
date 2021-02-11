@@ -28,12 +28,14 @@ class SLL {
             return "This list is empty.";
         }
         if (this.head.data === data) {
+            nodes--;
             this.removeFromFront();
         }
         runner = this.head;
         while (runner) {
             if (runner.next.data === data) {
                 runner.next = runner.next.next;
+                nodes--;
                 return "Completed."
             }
             runner = runner.next;
