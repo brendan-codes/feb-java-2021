@@ -18,7 +18,7 @@
 		<item key="org.eclipse.jdt.ui.typecomment.deprecated" value="true"/>
 	</section>
 	<section name="NewClassWizardPage">
-		<item key="create_constructor" value="true"/>
+		<item key="create_constructor" value="false"/>
 		<item key="create_unimplemented" value="true"/>
 	</section>
 	<section name="completion_proposal_size">
@@ -75,5 +75,6 @@
 		<item key="updateTextualMatches" value="false"/>
 		<item key="updateQualifiedNames" value="false"/>
 		<item key="patterns" value="*"/>
+		<item key="renameSubpackages" value="false"/>
 	</section>
 </section>
