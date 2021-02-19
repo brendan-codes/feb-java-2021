@@ -126,12 +126,12 @@ class Node {
 // you may use stacks queues arrays or dictionaries as additional storage
 // you may create helper methods to break this challenge down into smaller parts
 function isPalindromeV1(queue) {
-   // start with queue
-   // create 2nd queue by dequeuing from 1st into 2nd (push?)
-   // dequeue
-   // compare the "arrays" to check
+    // start with queue
+    // create 2nd queue by dequeuing from 1st into 2nd (push?)
+    // dequeue
+    // compare the "arrays" to check
 
-   //creating an array with the same order as the queue
+    //creating an array with the same order as the queue
     var arr = []
     while (!queue.isEmpty()) {
         var tempNode = queue.dequeue();
@@ -140,15 +140,15 @@ function isPalindromeV1(queue) {
 
     //checking Palindrome via the array
     var right = arr.length - 1;
-    for(i = 0; i < arr.length / 2; i++) {
+    for (i = 0; i < arr.length / 2; i++) {
         if (arr[i] != arr[right - i]) {
-        console.log(false);
+            console.log(false);
         }
     }
     console.log(true);
 
     // making original queue in its order
-    while (arr.length > 0){
+    while (arr.length > 0) {
         queue.enqueue(arr.pop());
     }
 
@@ -170,13 +170,13 @@ function isPalindromeV2(queue) {
 
     let returnVal = true;
     let i = 0;
-    while (!newQ.isEmpty()){
+    while (!newQ.isEmpty()) {
         console.log("I: ", i);
         let checkQ = newQ.dequeue();
         let checkStack = newStack.pop();
-        if(checkQ.data != checkStack.data){
-        console.log("checkQ.data ", checkQ.data)
-        console.log("checkStack.data ", checkStack.data)
+        if (checkQ.data != checkStack.data) {
+            console.log("checkQ.data ", checkQ.data)
+            console.log("checkStack.data ", checkStack.data)
             returnVal = false;
         }
         i++;

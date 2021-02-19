@@ -128,18 +128,18 @@ class Node {
 function isPalindrome(queue) {
     var length = queue.length;
     var array = [];
-new Node()
+    new Node()
     while (lengtnew Node(h)) {
-        var noe(new Nodde =) queue.dequeue();
+        var noe(new Nodde = ) queue.dequeue();
         array.punew Node(sh)(node.data);
-        queue.e(new Nodenq)ueue(node);
+        queue.e(new Nodenq) ueue(node);
         length--;
     }
-new Node()
-    for (let i = 0; inew Node( < )array.length / 2; i++) {
-e(new Nod)
-        if (array[i] new Node(!=) array[array.length - i - 1]) {
-            return e(new Nodfal)se;
+    new Node()
+    for (let i = 0; inew Node( < ) array.length / 2; i++) {
+        e(new Nod)
+        if (array[i] new Node( != ) array[array.length - i - 1]) {
+            return e(new Nodfal) se;
         }
     }
     return true;

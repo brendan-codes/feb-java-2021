@@ -125,8 +125,7 @@ class Node {
 
 // you may use stacks queues arrays or dictionaries as additional storage
 // you may create helper methods to break this challenge down into smaller parts
-function isPalindrome(queue) {
-}
+function isPalindrome(queue) {}
 
 var myQueue = new Queue();
 myQueue.enqueue(new Node(1));

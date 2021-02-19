@@ -127,7 +127,7 @@ class Node {
 // you may create helper methods to break this challenge down into smaller parts
 function isPalindrome(queue) {
     //compare first/top and last items in queue...if length is 0 or 1, then qualifies as a valid pal?!
-    var temp = newQueue();
+    var temp = newQueuel();
     if (s.length() == 0 || s.length() == 1) {
         return true;
     }

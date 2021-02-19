@@ -128,21 +128,21 @@ class Node {
 function isPalindrome(queue) {}
 
 var myQueue = new Queue();
-myQueue.enqueue(1);
-myQueue.enqueue(2);
-myQueue.enqueue(3);
-myQueue.enqueue(2);
-myQueue.enqueue(1);
+myQueue.enqueue(new Node(1));
+myQueue.enqueue(new Node(2));
+myQueue.enqueue(new Node(3));
+myQueue.enqueue(new Node(2));
+myQueue.enqueue(new Node(1));
 
 var myOtherQueue = new Queue();
-myOtherQueue.enqueue(1);
-myOtherQueue.enqueue(40);
-myOtherQueue.enqueue(3);
-myOtherQueue.enqueue(2);
-myOtherQueue.enqueue(1);
+myOtherQueue.enqueue(new Node(1));
+myOtherQueue.enqueue(new Node(40));
+myOtherQueue.enqueue(new Node(3));
+myOtherQueue.enqueue(new Node(2));
+myOtherQueue.enqueue(new Node(1));
 
 console.log(isPalindrome(myQueue)); // true
-console.log(isPalindrome(myOtherQueue)); // false
+conso
 
 function totalStack(stack) {
     var newStack = new slStack();
