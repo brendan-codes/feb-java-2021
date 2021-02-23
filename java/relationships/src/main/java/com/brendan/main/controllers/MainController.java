@@ -1,5 +1,6 @@
 package com.brendan.main.controllers;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +26,12 @@ public class MainController {
 	private StudentService studentService;
 
 	@GetMapping("/")
-	public String index() {
-		return "index.jsp";
+	public String index(HttpSession session) {
+		Long id = (Long) session.getAttribute("userId");
+		if( id != null) {
+			return "index.jsp";
+		}
+		return "redirect:/login";
 	}
 	
 	@GetMapping("/students")

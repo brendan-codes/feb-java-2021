@@ -1,6 +1,7 @@
 package com.brendan.main.models;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,10 +10,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="students")
@@ -31,9 +35,26 @@ public class Student {
     private Date createdAt;
     private Date updatedAt;
     
+    @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="school_id")
     private School school;
+    
+//    @ManyToMany(fetch = FetchType.LAZY)
+//    @JoinTable(
+//        name = "categories_products", 
+//        joinColumns = @JoinColumn(name = "product_id"), 
+//        inverseJoinColumns = @JoinColumn(name = "category_id")
+//    )
+//    private List<Category> categories;
+    
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+    	name = "students_teams",
+    	joinColumns = @JoinColumn(name = "student_id"),
+    	inverseJoinColumns = @JoinColumn(name = "team_id")
+    )
+    private List<Team> teams;
     
     public Student() {
         
@@ -105,6 +126,16 @@ public class Student {
 	public void setSchool(School school) {
 		this.school = school;
 	}
+
+	public List<Team> getTeams() {
+		return teams;
+	}
+
+	public void setTeams(List<Team> teams) {
+		this.teams = teams;
+	}
+	
+	
     
 	// reminder: add date setters
 }

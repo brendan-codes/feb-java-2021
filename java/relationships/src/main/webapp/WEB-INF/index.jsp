@@ -5,7 +5,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <h1>Welcome to Schools n' Students</h1>
-<a href="/schools">New School</a> | <a href="/students">New Student</a>
+<a href="/schools">New School</a> | <a href="/students">New Student</a> | <a href="/logout">logout</a>
 
 
 
