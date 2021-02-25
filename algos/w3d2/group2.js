@@ -45,6 +45,52 @@ class DLList {
         }
         console.log("value not found");
     }
+        if (this.isEmpty()){
+            console.log("list is empty");
+            return;
+        }
+        if (target == this.head.data){
+            this.addHead(node);
+            return;
+        }
+        var runner = this.head;
+        while (runner){
+            if (runner.data == target){
+                var nprev = runner.prev;
+                nprev.next = node;
+                runner.prev = node;
+                node.prev = nprev;
+                node.next = runner;
+                this.length++;
+                return;
+            }
+            runner = runner.next;
+        }
+        console.log("value not found");
+    }
+        if (this.isEmpty()){
+            console.log("list is empty");
+            return;
+        }
+        if (target == this.head.data){
+            this.addHead(node);
+            return;
+        }
+        var runner = this.head;
+        while (runner){
+            if (runner.data == target){
+                var nprev = runner.prev;
+                nprev.next = node;
+                runner.prev = node;
+                node.prev = nprev;
+                node.next = runner;
+                this.length++;
+                return;
+            }
+            runner = runner.next;
+        }
+        console.log("value not found");
+    }
 
     // push to head
     addHead(node) {

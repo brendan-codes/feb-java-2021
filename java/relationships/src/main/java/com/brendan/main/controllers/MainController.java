@@ -27,6 +27,8 @@ public class MainController {
 
 	@GetMapping("/")
 	public String index(HttpSession session) {
+		// pulling an id out of session
+		// helpful!
 		Long id = (Long) session.getAttribute("userId");
 		if( id != null) {
 			return "index.jsp";

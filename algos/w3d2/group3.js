@@ -36,11 +36,13 @@ class DLList {
                 //
                 if (runner.prev == null){
                     this.addHead(node);
+                    return "Added head";
                 }
                 runner.prev.next = node;
                 node.prev = runner.prev;
                 runner.prev = node;
                 node.next = runner;
+                this.length++;
                 return "Node successfully added"
             }
             // otherwise advance the runner

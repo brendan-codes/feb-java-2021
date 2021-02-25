@@ -17,10 +17,12 @@ class DLList {
 
     // == Main Methods ==
 
-    // add node before target
-    // target is the value of a node in the list
-    // consider the edge case where you may have to move the head
-    // conisder the edge case where you do not find the target
+    // return true or false if a node exists with data === val
+    exists(val){}
+
+    // remove and return the first node with data === val, if it exists
+    removeVal(val) {}
+
     prepend(target, node) {
         if (this.head !== null) { // Must have at least one node
             var curNode = this.head;
@@ -46,15 +48,6 @@ class DLList {
             }
         }
     }
-
-
-
-
-
-
-
-
-
 
     prependClean(target, node) {
         var runner = this.head; // set a runner
@@ -85,26 +78,12 @@ class DLList {
             this.head.prev = node;
             node.next = this.head;
             this.head = node;
-
-            // this.tail.next = node;
-            // node.prev = this.tail;
-            // this.tail = node;
         }
         this.length++;
     }
 
     // pop from tail
     removeTail() {
-        if (this.head == null) return; // empty list
-        if (this.head === this.tail) { // one node
-            var temp = this.tail; // set a temp
-            this.head = null; // disconnect the head
-            this.tail = null; // disconnect the tail
-            this.length--; // decrement
-            return temp;
-        }
-        var temp = this.tail; // set a temp
-        this.tail = this.tail.prev; // move the tail back
         if (this.head == null) return; // empty list
         if (this.head === this.tail) { // one node
             var temp = this.tail; // set a temp

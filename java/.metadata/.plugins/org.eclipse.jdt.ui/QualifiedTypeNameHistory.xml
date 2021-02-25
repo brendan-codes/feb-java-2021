@@ -9,7 +9,8 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.Email"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="com.brendan.main.models.User"/>
     <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.brendan.main.models.User"/>
+    <fullyQualifiedTypeName name="org.springframework.validation.Validator"/>
 </qualifiedTypeNameHistroy>

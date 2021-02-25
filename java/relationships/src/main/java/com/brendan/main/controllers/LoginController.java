@@ -15,11 +15,15 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.brendan.main.models.User;
 import com.brendan.main.services.UserService;
+import com.brendan.main.validators.UserValidator;
 
 @Controller
 public class LoginController {
 	@Autowired
     private UserService userService;
+	
+	@Autowired
+	private UserValidator userValidator;
 
     
     @RequestMapping("/registration")
@@ -33,10 +37,15 @@ public class LoginController {
     
     @RequestMapping(value="/registration", method=RequestMethod.POST)
     public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session) {
-//        userValidator.validate(user, result);
+        userValidator.validate(user, result);
         if(result.hasErrors()) {
             return "registrationPage.jsp";
         }
+        
+//        if(userService.findByEmail(user.getEmail())) {
+//        	???
+//        }
+        
         User u = userService.registerUser(user);
         session.setAttribute("userId", u.getId());
         return "redirect:/";
@@ -52,6 +61,7 @@ public class LoginController {
         // if the user is authenticated, save their user id in session
         // else, add error messages and return the login page
     	if(userService.authenticateUser(email, password)) {
+    		
     		User thisUser = userService.findByEmail(email);
     		session.setAttribute("userId", thisUser.getId());
     		return "redirect:/";
